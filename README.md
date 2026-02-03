@@ -64,7 +64,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello, Podman! This is Baeldung');
+  res.send('Hello, Podman!');
 });
 
 app.listen(port, () => {
@@ -109,7 +109,7 @@ Alternatively, we can use the `curl` command:
 
 ```bash
 $ curl localhost:3000
-Hello, Podman! This is Baeldung
+Hello, Podman!
 ```
 
 Hence, we've successfully created the NodeJS application and verified its function.
@@ -217,7 +217,7 @@ podman push <IMAGE_ID> docker://docker.io/<username>/<imagename>
 So, **let's push the podman-node-server image**:
 
 ```bash
-$ podman push 6bc75f05e543 docker://docker.io/afkzoro/podman-node-server
+$ podman push 6bc75f05e543 docker://docker.io/username/podman-node-server
 ```
 
 After the push is complete, **we can verify the image's publication on the Docker Hub website**.
